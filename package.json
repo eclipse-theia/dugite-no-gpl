@@ -1,7 +1,7 @@
 {
-  "name": "dugite",
+  "name": "dugite-no-gpl",
   "version": "2.0.0",
-  "description": "Elegant bindings for Git",
+  "description": "Fork of dugite - Elegant bindings for Git - that skips fetching git binaries post-install",
   "main": "./build/lib/index.js",
   "typings": "./build/lib/index.d.ts",
   "scripts": {
@@ -14,7 +14,6 @@
     "test:slow": "cross-env LOCAL_GIT_DIRECTORY=./git/ jest --runInBand --silent --config ./jest.slow.config.js",
     "test:external": "jest --runInBand --silent --config ./jest.external.config.js",
     "download-git": "node ./script/download-git.js",
-    "postinstall": "node ./script/download-git.js",
     "prettify": "prettier \"{examples,lib,script,test}/**/*.ts\" --write",
     "is-it-pretty": "prettier --check \"{examples,lib,script,test}/**/*.ts\"",
     "update-embedded-git": "node ./script/update-embedded-git.js"
@@ -24,14 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/desktop/dugite.git"
+    "url": "git+https://github.com/theia-ide/dugite.git"
   },
   "author": "GitHub and contributors",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/desktop/dugite/issues"
+    "url": "https://github.com/theia-ide/dugite/issues"
   },
-  "homepage": "https://github.com/desktop/dugite#readme",
+  "homepage": "https://github.com/theia-ide/dugite#readme",
   "dependencies": {
     "progress": "^2.0.3",
     "tar": "^6.1.11"
